@@ -1,11 +1,20 @@
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// v9 compat packages are API compatible with v8 code
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
+
 const firebaseConfig = {
-  apiKey: "AIzaSyAH6SZ-PYdLwR_KRfzzByRNwH3m2-Q0BiM",
-  authDomain: "clone-8401e.firebaseapp.com",
-  projectId: "clone-8401e",
-  storageBucket: "clone-8401e.appspot.com",
-  messagingSenderId: "142538294833",
-  appId: "1:142538294833:web:4fad4e6808f6315d893710",
-  measurementId: "G-GGYFZMNTNC",
+  apiKey: "AIzaSyCtxl7Y9np61YRNZIFTLhNdKvMV7VlA_VE",
+  authDomain: "clone1-1beed.firebaseapp.com",
+  projectId: "clone1-1beed",
+  storageBucket: "clone1-1beed.appspot.com",
+  messagingSenderId: "95428142774",
+  appId: "1:95428142774:web:39dfadd6aa493691fb6817",
+  measurementId: "G-PY6Y1Q1SYQ"
 };
-c
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+
+const db = firebaseApp.firestore();
+const auth = firebase.auth();
+
+export { db, auth };
